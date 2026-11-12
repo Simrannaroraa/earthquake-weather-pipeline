@@ -1,0 +1,38 @@
+{
+  "name": "earthquake-weather-pipeline-job",
+  "description": "Track A end-to-end pipeline: Ingests USGS earthquakes and Open-Meteo weather snapshots, lands raw JSON in Unity Catalog Volume, and transforms through Bronze, Silver, and Gold Delta tables.",
+  "schedule": {
+    "quartz_cron_expression": "0 0 */6 * * ?",
+    "timezone_id": "UTC",
+    "pause_status": "PAUSED"
+  },
+  "tasks": [
+    {
+      "task_key": "execute_pipeline_notebook",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/shared/earthquake_pipeline_notebook",
+        "source": "WORKSPACE",
+        "base_parameters": {
+          "catalog": "workspace",
+          "landing_path": "/Volumes/workspace/bronze/landing/"
+        }
+      },
+      "timeout_seconds": 1800,
+      "max_retries": 2,
+      "min_retry_interval_millis": 60000,
+      "retry_on_timeout": false
+    }
+  ],
+  "format": "MULTI_TASK",
+  "parameters": [
+    {
+      "name": "catalog",
+      "default": "workspace"
+    },
+    {
+      "name": "landing_path",
+      "default": "/Volumes/workspace/bronze/landing/"
+    }
+  ]
+}
+

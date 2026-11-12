@@ -1,0 +1,32 @@
+bundle:
+  name: earthquake-weather-pipeline
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+
+  prod:
+    mode: production
+    workspace:
+      root_path: /Workspace/.bundle/${bundle.name}/${bundle.target}
+
+resources:
+  jobs:
+    earthquake_pipeline_scheduled_run:
+      name: "[Track A] Earthquake + Weather Pipeline"
+      description: "Scheduled execution of Bronze/Silver/Gold transformations on Serverless Standard v6"
+      schedule:
+        quartz_cron_expression: "0 0 */6 * * ?"
+        timezone_id: "UTC"
+        pause_status: PAUSED
+      tasks:
+        - task_key: run_notebook
+          notebook_task:
+            notebook_path: ./earthquake_pipeline_notebook.py
+            base_parameters:
+              catalog: workspace
+              landing_path: /Volumes/workspace/bronze/landing/
+

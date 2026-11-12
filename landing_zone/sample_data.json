@@ -1,0 +1,2540 @@
+{
+  "run_id": "20261112T034810505141Z",
+  "ingested_at": "2026-11-12T03:48:10.505184+00:00",
+  "source": "usgs_fdsn_open_meteo",
+  "parameters": {
+    "period": "day",
+    "minimum_magnitude": 2.5,
+    "limit": 100,
+    "weather_limit": 25
+  },
+  "earthquakes": {
+    "type": "FeatureCollection",
+    "metadata": {
+      "generated": 1794455285000,
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&limit=100&minmagnitude=2.5&starttime=2026-11-11T03%3A48%3A05&endtime=2026-11-12T03%3A48%3A05",
+      "title": "USGS Earthquakes",
+      "status": 200,
+      "api": "2.8.4",
+      "limit": 100,
+      "offset": 1
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 3.1,
+          "place": "9 km SSE of Kasilof, Alaska",
+          "time": 1794455031711,
+          "updated": 1794455225843,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wkcjcz",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=aka2026wkcjcz&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "automatic",
+          "tsunami": 0,
+          "sig": 148,
+          "net": "ak",
+          "code": "a2026wkcjcz",
+          "ids": ",aka2026wkcjcz,",
+          "sources": ",ak,",
+          "types": ",origin,phase-data,",
+          "nst": 129,
+          "dmin": 0.5,
+          "rms": 0.6,
+          "gap": 56,
+          "magType": "ml",
+          "type": "earthquake",
+          "title": "M 3.1 - 9 km SSE of Kasilof, Alaska"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -151.213,
+            60.261,
+            59.6
+          ]
+        },
+        "id": "aka2026wkcjcz"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.8,
+          "place": "43 km SE of Severo-Kuril’sk, Russia",
+          "time": 1794446324576,
+          "updated": 1794447189040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txqa",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txqa&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 354,
+          "net": "us",
+          "code": "7000txqa",
+          "ids": ",us7000txqa,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 60,
+          "dmin": 2.756,
+          "rms": 0.74,
+          "gap": 121,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.8 - 43 km SE of Severo-Kuril’sk, Russia"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            156.6137,
+            50.4399,
+            74.47
+          ]
+        },
+        "id": "us7000txqa"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.4,
+          "place": "84 km SE of Akutan, Alaska",
+          "time": 1794441646340,
+          "updated": 1794442814040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txpv",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txpv&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": 2.978,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 298,
+          "net": "us",
+          "code": "7000txpv",
+          "ids": ",us7000txpv,aka2026wjuxqs,",
+          "sources": ",us,ak,",
+          "types": ",origin,phase-data,shakemap,",
+          "nst": 34,
+          "dmin": 0.811,
+          "rms": 1.1,
+          "gap": 202,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.4 - 84 km SE of Akutan, Alaska"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -164.8071,
+            53.637,
+            37.007
+          ]
+        },
+        "id": "us7000txpv"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 3.9,
+          "place": "95 km SE of Akutan, Alaska",
+          "time": 1794441580557,
+          "updated": 1794443944040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txpu",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txpu&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": 2.237,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 234,
+          "net": "us",
+          "code": "7000txpu",
+          "ids": ",us7000txpu,aka2026wjuwrv,",
+          "sources": ",us,ak,",
+          "types": ",origin,phase-data,shakemap,",
+          "nst": 22,
+          "dmin": 0.904,
+          "rms": 0.71,
+          "gap": 209,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 3.9 - 95 km SE of Akutan, Alaska"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -164.7435,
+            53.5338,
+            36.874
+          ]
+        },
+        "id": "us7000txpu"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 2.5,
+          "place": "23 km S of Westbrook, Texas",
+          "time": 1794438349392,
+          "updated": 1794441723669,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026wgdyjd",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=tx2026wgdyjd&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 96,
+          "net": "tx",
+          "code": "2026wgdyjd",
+          "ids": ",us7000txpl,tx2026wgdyjd,",
+          "sources": ",us,tx,",
+          "types": ",origin,phase-data,",
+          "nst": 47,
+          "dmin": 0.2,
+          "rms": 0.1,
+          "gap": 57,
+          "magType": "ml",
+          "type": "earthquake",
+          "title": "M 2.5 - 23 km S of Westbrook, Texas"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -101.06,
+            32.147,
+            9.4482
+          ]
+        },
+        "id": "tx2026wgdyjd"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.6,
+          "place": "73 km NNW of Gyalshing, India",
+          "time": 1794438022433,
+          "updated": 1794454491050,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txpk",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txpk&format=geojson",
+          "felt": 4,
+          "cdi": 3.1,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 327,
+          "net": "us",
+          "code": "7000txpk",
+          "ids": ",us7000txpk,",
+          "sources": ",us,",
+          "types": ",dyfi,origin,phase-data,",
+          "nst": 40,
+          "dmin": 9.216,
+          "rms": 0.91,
+          "gap": 161,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.6 - 73 km NNW of Gyalshing, India"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            87.8857,
+            27.8692,
+            10
+          ]
+        },
+        "id": "us7000txpk"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 2.6,
+          "place": "112 km N of Yakutat, Alaska",
+          "time": 1794437058380,
+          "updated": 1794447133040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txpg",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txpg&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 104,
+          "net": "us",
+          "code": "7000txpg",
+          "ids": ",us7000txpg,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 14,
+          "dmin": 0.526,
+          "rms": 0.71,
+          "gap": 164,
+          "magType": "ml",
+          "type": "earthquake",
+          "title": "M 2.6 - 112 km N of Yakutat, Alaska"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -140.1042,
+            60.5416,
+            10
+          ]
+        },
+        "id": "us7000txpg"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.9,
+          "place": "116 km E of Georgetown, Saint Helena",
+          "time": 1794434622425,
+          "updated": 1794446688040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txpa",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txpa&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 369,
+          "net": "us",
+          "code": "7000txpa",
+          "ids": ",us7000txpa,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 47,
+          "dmin": 16.85,
+          "rms": 0.9,
+          "gap": 50,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.9 - 116 km E of Georgetown, Saint Helena"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -13.3536,
+            -7.9928,
+            10
+          ]
+        },
+        "id": "us7000txpa"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 2.93,
+          "place": "22 km SE of Emajagua, Puerto Rico",
+          "time": 1794432018460,
+          "updated": 1794436927015,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71539098",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=pr71539098&format=geojson",
+          "felt": 1,
+          "cdi": 1,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 132,
+          "net": "pr",
+          "code": "71539098",
+          "ids": ",pr71539098,",
+          "sources": ",pr,",
+          "types": ",dyfi,origin,phase-data,",
+          "nst": 10,
+          "dmin": 0.3084,
+          "rms": 0.24,
+          "gap": 214,
+          "magType": "md",
+          "type": "earthquake",
+          "title": "M 2.9 - 22 km SE of Emajagua, Puerto Rico"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -65.7301666666667,
+            17.8535,
+            8.12
+          ]
+        },
+        "id": "pr71539098"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.4,
+          "place": "112 km SW of Brisas Barra de Suchiate, Mexico",
+          "time": 1794431721821,
+          "updated": 1794446214040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txns",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txns&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 298,
+          "net": "us",
+          "code": "7000txns",
+          "ids": ",us7000txns,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 36,
+          "dmin": 2.584,
+          "rms": 0.81,
+          "gap": 227,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.4 - 112 km SW of Brisas Barra de Suchiate, Mexico"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -92.9412,
+            13.803,
+            10
+          ]
+        },
+        "id": "us7000txns"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.5,
+          "place": "41 km SSE of Camiña, Chile",
+          "time": 1794429904390,
+          "updated": 1794435761875,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txni",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txni&format=geojson",
+          "felt": 1,
+          "cdi": 2,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 312,
+          "net": "us",
+          "code": "7000txni",
+          "ids": ",us7000txni,",
+          "sources": ",us,",
+          "types": ",dyfi,origin,phase-data,",
+          "nst": 36,
+          "dmin": 0.49,
+          "rms": 0.73,
+          "gap": 91,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.5 - 41 km SSE of Camiña, Chile"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -69.3312,
+            -19.6783,
+            112.957
+          ]
+        },
+        "id": "us7000txni"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.4,
+          "place": "274 km W of Houma, Tonga",
+          "time": 1794429502718,
+          "updated": 1794434099040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txnf",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txnf&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 298,
+          "net": "us",
+          "code": "7000txnf",
+          "ids": ",us7000txnf,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 69,
+          "dmin": 5.212,
+          "rms": 0.69,
+          "gap": 125,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.4 - 274 km W of Houma, Tonga"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -177.9398,
+            -21.3542,
+            392.607
+          ]
+        },
+        "id": "us7000txnf"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 3.3,
+          "place": "131 km SSE of Old Harbor, Alaska",
+          "time": 1794428686192,
+          "updated": 1794433441040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjnswr",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=aka2026wjnswr&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "automatic",
+          "tsunami": 0,
+          "sig": 168,
+          "net": "ak",
+          "code": "a2026wjnswr",
+          "ids": ",us7000txnd,aka2026wjnswr,",
+          "sources": ",us,ak,",
+          "types": ",origin,phase-data,",
+          "nst": 81,
+          "dmin": 1.1,
+          "rms": 0.6,
+          "gap": 220,
+          "magType": "ml",
+          "type": "earthquake",
+          "title": "M 3.3 - 131 km SSE of Old Harbor, Alaska"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -152.443,
+            56.125,
+            5.8
+          ]
+        },
+        "id": "aka2026wjnswr"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.5,
+          "place": "south of the Fiji Islands",
+          "time": 1794426621669,
+          "updated": 1794427921040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txmx",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txmx&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 312,
+          "net": "us",
+          "code": "7000txmx",
+          "ids": ",us7000txmx,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 43,
+          "dmin": 6.056,
+          "rms": 0.85,
+          "gap": 89,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.5 - south of the Fiji Islands"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -179.8474,
+            -23.5023,
+            527.582
+          ]
+        },
+        "id": "us7000txmx"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 5,
+          "place": "48 km NW of Ancud, Chile",
+          "time": 1794424877374,
+          "updated": 1794432119663,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txmq",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txmq&format=geojson",
+          "felt": 4,
+          "cdi": 3.4,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 386,
+          "net": "us",
+          "code": "7000txmq",
+          "ids": ",us7000txmq,",
+          "sources": ",us,",
+          "types": ",dyfi,origin,phase-data,",
+          "nst": 121,
+          "dmin": 1.738,
+          "rms": 0.81,
+          "gap": 78,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 5.0 - 48 km NW of Ancud, Chile"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -74.1759,
+            -41.5234,
+            34.893
+          ]
+        },
+        "id": "us7000txmq"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 3.1,
+          "place": "128 km SSE of Old Harbor, Alaska",
+          "time": 1794424099738,
+          "updated": 1794425548040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjlejc",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=aka2026wjlejc&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "automatic",
+          "tsunami": 0,
+          "sig": 148,
+          "net": "ak",
+          "code": "a2026wjlejc",
+          "ids": ",us7000txmn,aka2026wjlejc,",
+          "sources": ",us,ak,",
+          "types": ",origin,phase-data,",
+          "nst": 52,
+          "dmin": 1,
+          "rms": 0.6,
+          "gap": 240,
+          "magType": "ml",
+          "type": "earthquake",
+          "title": "M 3.1 - 128 km SSE of Old Harbor, Alaska"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -152.489,
+            56.136,
+            20.1
+          ]
+        },
+        "id": "aka2026wjlejc"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 3.9,
+          "place": "34 km ESE of Vallenar, Chile",
+          "time": 1794422516682,
+          "updated": 1794424808040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txmi",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txmi&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 234,
+          "net": "us",
+          "code": "7000txmi",
+          "ids": ",us7000txmi,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 36,
+          "dmin": 0.443,
+          "rms": 1.01,
+          "gap": 116,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 3.9 - 34 km ESE of Vallenar, Chile"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -70.4194,
+            -28.6411,
+            113.235
+          ]
+        },
+        "id": "us7000txmi"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 5.1,
+          "place": "80 km W of Panguna, Papua New Guinea",
+          "time": 1794418702582,
+          "updated": 1794421474040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txm8",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txm8&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 400,
+          "net": "us",
+          "code": "7000txm8",
+          "ids": ",us7000txm8,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 161,
+          "dmin": 3.346,
+          "rms": 0.75,
+          "gap": 21,
+          "magType": "mww",
+          "type": "earthquake",
+          "title": "M 5.1 - 80 km W of Panguna, Papua New Guinea"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            154.7612,
+            -6.3288,
+            58.822
+          ]
+        },
+        "id": "us7000txm8"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 2.6,
+          "place": "15 km E of Pearsall, Texas",
+          "time": 1794415473750,
+          "updated": 1794418615310,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026wfribb",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=tx2026wfribb&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 104,
+          "net": "tx",
+          "code": "2026wfribb",
+          "ids": ",us7000txkp,tx2026wfribb,",
+          "sources": ",us,tx,",
+          "types": ",origin,phase-data,",
+          "nst": 21,
+          "dmin": 0.1,
+          "rms": 0.3,
+          "gap": 74,
+          "magType": "ml",
+          "type": "earthquake",
+          "title": "M 2.6 - 15 km E of Pearsall, Texas"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.943,
+            28.87,
+            8.4451
+          ]
+        },
+        "id": "tx2026wfribb"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 2.5,
+          "place": "28 km SSE of Denali National Park, Alaska",
+          "time": 1794414426604,
+          "updated": 1794414500041,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjfuiv",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=aka2026wjfuiv&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "automatic",
+          "tsunami": 0,
+          "sig": 96,
+          "net": "ak",
+          "code": "a2026wjfuiv",
+          "ids": ",aka2026wjfuiv,",
+          "sources": ",ak,",
+          "types": ",origin,phase-data,",
+          "nst": 23,
+          "dmin": 0.3,
+          "rms": 0.8,
+          "gap": 81,
+          "magType": "ml",
+          "type": "earthquake",
+          "title": "M 2.5 - 28 km SSE of Denali National Park, Alaska"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -151.547,
+            63.297,
+            17.3
+          ]
+        },
+        "id": "aka2026wjfuiv"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 5.1,
+          "place": "South Sandwich Islands region",
+          "time": 1794411565949,
+          "updated": 1794412661040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txjg",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txjg&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 400,
+          "net": "us",
+          "code": "7000txjg",
+          "ids": ",us7000txjg,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 29,
+          "dmin": 5.312,
+          "rms": 0.69,
+          "gap": 102,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 5.1 - South Sandwich Islands region"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -27.7366,
+            -56.0247,
+            104.66
+          ]
+        },
+        "id": "us7000txjg"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 2.5,
+          "place": "56 km S of Whites City, New Mexico",
+          "time": 1794408825518,
+          "updated": 1794413039040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026wfnqhx",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=tx2026wfnqhx&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 96,
+          "net": "tx",
+          "code": "2026wfnqhx",
+          "ids": ",us7000txje,tx2026wfnqhx,",
+          "sources": ",us,tx,",
+          "types": ",origin,phase-data,",
+          "nst": 42,
+          "dmin": 0.1,
+          "rms": 0.2,
+          "gap": 85,
+          "magType": "ml",
+          "type": "earthquake",
+          "title": "M 2.5 - 56 km S of Whites City, New Mexico"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -104.333,
+            31.671,
+            6.6125
+          ]
+        },
+        "id": "tx2026wfnqhx"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 2.8,
+          "place": "77 km W of Arctic Village, Alaska",
+          "time": 1794404888117,
+          "updated": 1794405127085,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjamms",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=aka2026wjamms&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "automatic",
+          "tsunami": 0,
+          "sig": 121,
+          "net": "ak",
+          "code": "a2026wjamms",
+          "ids": ",aka2026wjamms,",
+          "sources": ",ak,",
+          "types": ",origin,phase-data,",
+          "nst": 38,
+          "dmin": 0.7,
+          "rms": 0.8,
+          "gap": 63,
+          "magType": "ml",
+          "type": "earthquake",
+          "title": "M 2.8 - 77 km W of Arctic Village, Alaska"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -147.39,
+            68.052,
+            5
+          ]
+        },
+        "id": "aka2026wjamms"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.5,
+          "place": "62 km NNE of Port-Olry, Vanuatu",
+          "time": 1794401106171,
+          "updated": 1794406926040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txiz",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txiz&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 312,
+          "net": "us",
+          "code": "7000txiz",
+          "ids": ",us7000txiz,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 53,
+          "dmin": 6.649,
+          "rms": 0.86,
+          "gap": 129,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.5 - 62 km NNE of Port-Olry, Vanuatu"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            167.2586,
+            -14.5029,
+            149.444
+          ]
+        },
+        "id": "us7000txiz"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 5.1,
+          "place": "27 km WSW of Calama, Chile",
+          "time": 1794397011281,
+          "updated": 1794412203743,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txis",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txis&format=geojson",
+          "felt": 1,
+          "cdi": 2,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 400,
+          "net": "us",
+          "code": "7000txis",
+          "ids": ",us7000txis,",
+          "sources": ",us,",
+          "types": ",dyfi,origin,phase-data,",
+          "nst": 77,
+          "dmin": 0.406,
+          "rms": 1.01,
+          "gap": 65,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 5.1 - 27 km WSW of Calama, Chile"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -69.1693,
+            -22.5427,
+            91.309
+          ]
+        },
+        "id": "us7000txis"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 3.04,
+          "place": "43 km N of Charlotte Amalie, U.S. Virgin Islands",
+          "time": 1794396910000,
+          "updated": 1794399149490,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71539058",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=pr71539058&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 142,
+          "net": "pr",
+          "code": "71539058",
+          "ids": ",us7000txiq,pr71539058,",
+          "sources": ",us,pr,",
+          "types": ",origin,phase-data,",
+          "nst": 13,
+          "dmin": 0.3769,
+          "rms": 0.29,
+          "gap": 214,
+          "magType": "md",
+          "type": "earthquake",
+          "title": "M 3.0 - 43 km N of Charlotte Amalie, U.S. Virgin Islands"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -64.9921666666667,
+            18.7298333333333,
+            35.89
+          ]
+        },
+        "id": "pr71539058"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 5.1,
+          "place": "Pulau Pulau Tanimbar, Indonesia",
+          "time": 1794396744685,
+          "updated": 1794398102040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txir",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txir&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 400,
+          "net": "us",
+          "code": "7000txir",
+          "ids": ",us7000txir,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 47,
+          "dmin": 4.945,
+          "rms": 0.82,
+          "gap": 88,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 5.1 - Pulau Pulau Tanimbar, Indonesia"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            130.2513,
+            -7.9445,
+            14.704
+          ]
+        },
+        "id": "us7000txir"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.6,
+          "place": "64 km NW of Port-Vila, Vanuatu",
+          "time": 1794394657101,
+          "updated": 1794406181040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txil",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txil&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 326,
+          "net": "us",
+          "code": "7000txil",
+          "ids": ",us7000txil,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 24,
+          "dmin": 4.779,
+          "rms": 0.59,
+          "gap": 139,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.6 - 64 km NW of Port-Vila, Vanuatu"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            167.9671,
+            -17.2615,
+            42.696
+          ]
+        },
+        "id": "us7000txil"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 2.92,
+          "place": "20 km WNW of Charlotte Amalie, U.S. Virgin Islands",
+          "time": 1794394266090,
+          "updated": 1794396361940,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71539048",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=pr71539048&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 131,
+          "net": "pr",
+          "code": "71539048",
+          "ids": ",pr71539048,",
+          "sources": ",pr,",
+          "types": ",origin,phase-data,",
+          "nst": 6,
+          "dmin": 0.1568,
+          "rms": 0.11,
+          "gap": 178,
+          "magType": "md",
+          "type": "earthquake",
+          "title": "M 2.9 - 20 km WNW of Charlotte Amalie, U.S. Virgin Islands"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -65.1045,
+            18.4223333333333,
+            15.98
+          ]
+        },
+        "id": "pr71539048"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 2.76,
+          "place": "9 km NNW of Garrochales, Puerto Rico",
+          "time": 1794391968570,
+          "updated": 1794393283740,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71539033",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=pr71539033&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 117,
+          "net": "pr",
+          "code": "71539033",
+          "ids": ",pr71539033,",
+          "sources": ",pr,",
+          "types": ",origin,phase-data,",
+          "nst": 19,
+          "dmin": 0.2446,
+          "rms": 0.24,
+          "gap": 194,
+          "magType": "md",
+          "type": "earthquake",
+          "title": "M 2.8 - 9 km NNW of Garrochales, Puerto Rico"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.5931666666667,
+            18.5388333333333,
+            87.1
+          ]
+        },
+        "id": "pr71539033"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.1,
+          "place": "23 km WSW of Eilat, Israel",
+          "time": 1794389092651,
+          "updated": 1794437445251,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txi6",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txi6&format=geojson",
+          "felt": 3,
+          "cdi": 3.1,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 260,
+          "net": "us",
+          "code": "7000txi6",
+          "ids": ",us7000txi6,",
+          "sources": ",us,",
+          "types": ",dyfi,origin,phase-data,",
+          "nst": 27,
+          "dmin": 1.963,
+          "rms": 0.54,
+          "gap": 188,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.1 - 23 km WSW of Eilat, Israel"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            34.7217,
+            29.4748,
+            10
+          ]
+        },
+        "id": "us7000txi6"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 3.7,
+          "place": "53 km SW of Port Alexander, Alaska",
+          "time": 1794386923021,
+          "updated": 1794424330827,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wiqmvw",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=aka2026wiqmvw&format=geojson",
+          "felt": 1,
+          "cdi": 2.2,
+          "mmi": 1.796,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 211,
+          "net": "ak",
+          "code": "a2026wiqmvw",
+          "ids": ",aka2026wiqmvw,",
+          "sources": ",ak,",
+          "types": ",dyfi,origin,phase-data,shakemap,",
+          "nst": 24,
+          "dmin": 1.2,
+          "rms": 0.8,
+          "gap": 206,
+          "magType": "ml",
+          "type": "earthquake",
+          "title": "M 3.7 - 53 km SW of Port Alexander, Alaska"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -135.225,
+            55.895,
+            3.4
+          ]
+        },
+        "id": "aka2026wiqmvw"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.4,
+          "place": "western Xizang",
+          "time": 1794386872006,
+          "updated": 1794390266040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txi2",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txi2&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 298,
+          "net": "us",
+          "code": "7000txi2",
+          "ids": ",us7000txi2,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 34,
+          "dmin": 10.69,
+          "rms": 0.98,
+          "gap": 151,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.4 - western Xizang"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            86.5462,
+            34.149,
+            10
+          ]
+        },
+        "id": "us7000txi2"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.7,
+          "place": "152 km WSW of Merizo Village, Guam",
+          "time": 1794386235449,
+          "updated": 1794387843040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txi0",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txi0&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 340,
+          "net": "us",
+          "code": "7000txi0",
+          "ids": ",us7000txi0,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 45,
+          "dmin": 3.369,
+          "rms": 0.86,
+          "gap": 71,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.7 - 152 km WSW of Merizo Village, Guam"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            143.3322,
+            12.8418,
+            137.374
+          ]
+        },
+        "id": "us7000txi0"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.3,
+          "place": "9 km W of La Humedad, Mexico",
+          "time": 1794384337278,
+          "updated": 1794388485040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txhv",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txhv&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 284,
+          "net": "us",
+          "code": "7000txhv",
+          "ids": ",us7000txhv,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 41,
+          "dmin": 1.237,
+          "rms": 1.23,
+          "gap": 220,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.3 - 9 km W of La Humedad, Mexico"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -97.7508,
+            16.5979,
+            35
+          ]
+        },
+        "id": "us7000txhv"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 3.7,
+          "place": "116 km SE of Port Graham, Alaska",
+          "time": 1794382725752,
+          "updated": 1794423903635,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wioent",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=aka2026wioent&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": 1.507,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 211,
+          "net": "ak",
+          "code": "a2026wioent",
+          "ids": ",us7000txhr,aka2026wioent,",
+          "sources": ",us,ak,",
+          "types": ",origin,phase-data,shakemap,",
+          "nst": 202,
+          "dmin": 1,
+          "rms": 0.9,
+          "gap": 132,
+          "magType": "ml",
+          "type": "earthquake",
+          "title": "M 3.7 - 116 km SE of Port Graham, Alaska"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -150.562,
+            58.534,
+            40.2
+          ]
+        },
+        "id": "aka2026wioent"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.2,
+          "place": "64 km WSW of Valparaíso, Chile",
+          "time": 1794380249738,
+          "updated": 1794389285954,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txhn",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txhn&format=geojson",
+          "felt": 1,
+          "cdi": 2.2,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 272,
+          "net": "us",
+          "code": "7000txhn",
+          "ids": ",us7000txhn,",
+          "sources": ",us,",
+          "types": ",dyfi,origin,phase-data,",
+          "nst": 39,
+          "dmin": 0.568,
+          "rms": 1.06,
+          "gap": 105,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.2 - 64 km WSW of Valparaíso, Chile"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -72.2667,
+            -33.2527,
+            26.346
+          ]
+        },
+        "id": "us7000txhn"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 5.1,
+          "place": "Balleny Islands region",
+          "time": 1794378105383,
+          "updated": 1794379133040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txhi",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txhi&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 400,
+          "net": "us",
+          "code": "7000txhi",
+          "ids": ",us7000txhi,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 20,
+          "dmin": 15.322,
+          "rms": 0.54,
+          "gap": 136,
+          "magType": "mww",
+          "type": "earthquake",
+          "title": "M 5.1 - Balleny Islands region"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            155.0206,
+            -62.4284,
+            10
+          ]
+        },
+        "id": "us7000txhi"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 5,
+          "place": "152 km SE of Kuril’sk, Russia",
+          "time": 1794374788222,
+          "updated": 1794375772040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txgv",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txgv&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 385,
+          "net": "us",
+          "code": "7000txgv",
+          "ids": ",us7000txgv,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 60,
+          "dmin": 4.902,
+          "rms": 0.9,
+          "gap": 135,
+          "magType": "mww",
+          "type": "earthquake",
+          "title": "M 5.0 - 152 km SE of Kuril’sk, Russia"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            149.4063,
+            44.3915,
+            30.338
+          ]
+        },
+        "id": "us7000txgv"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.6,
+          "place": "54 km WNW of Malfa, Italy",
+          "time": 1794373928509,
+          "updated": 1794386232040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txgq",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txgq&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 326,
+          "net": "us",
+          "code": "7000txgq",
+          "ids": ",us7000txgq,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 58,
+          "dmin": 1.287,
+          "rms": 0.77,
+          "gap": 55,
+          "magType": "mww",
+          "type": "earthquake",
+          "title": "M 4.6 - 54 km WNW of Malfa, Italy"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            14.2589,
+            38.7563,
+            10
+          ]
+        },
+        "id": "us7000txgq"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.3,
+          "place": "70 km SW of Nikolski, Alaska",
+          "time": 1794370859883,
+          "updated": 1794425134518,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txgi",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txgi&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": 3,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 284,
+          "net": "us",
+          "code": "7000txgi",
+          "ids": ",aka2026wihoxj,us7000txgi,",
+          "sources": ",ak,us,",
+          "types": ",origin,phase-data,shakemap,",
+          "nst": 40,
+          "dmin": 0.658,
+          "rms": 0.57,
+          "gap": 172,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.3 - 70 km SW of Nikolski, Alaska"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -169.6878,
+            52.5525,
+            42.206
+          ]
+        },
+        "id": "us7000txgi"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.6,
+          "place": "130 km ENE of Hasaki, Japan",
+          "time": 1794369412372,
+          "updated": 1794370766040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000txgg",
+          "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us7000txgg&format=geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 326,
+          "net": "us",
+          "code": "7000txgg",
+          "ids": ",us7000txgg,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 23,
+          "dmin": 3.233,
+          "rms": 1.05,
+          "gap": 181,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.6 - 130 km ENE of Hasaki, Japan"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            142.185,
+            36.1492,
+            10
+          ]
+        },
+        "id": "us7000txgg"
+      }
+    ],
+    "bbox": [
+      -179.8474,
+      -62.4284,
+      3.4,
+      167.9671,
+      68.052,
+      527.582
+    ]
+  },
+  "weather_snapshots": [
+    {
+      "event_id": "aka2026wkcjcz",
+      "requested_at": "2026-11-12T03:48:06.608013+00:00",
+      "response": {
+        "latitude": 60.210896,
+        "longitude": -151.19159,
+        "generationtime_ms": 0.11479854583740234,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 56.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 0.0,
+          "relative_humidity_2m": 97,
+          "apparent_temperature": -3.1,
+          "precipitation": 0.2,
+          "weather_code": 85,
+          "wind_speed_10m": 6.1
+        }
+      }
+    },
+    {
+      "event_id": "us7000txqa",
+      "requested_at": "2026-11-12T03:48:06.767696+00:00",
+      "response": {
+        "latitude": 50.439365,
+        "longitude": 156.66667,
+        "generationtime_ms": 0.15544891357421875,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 3.0,
+          "relative_humidity_2m": 72,
+          "apparent_temperature": -4.4,
+          "precipitation": 0.0,
+          "weather_code": 3,
+          "wind_speed_10m": 34.0
+        }
+      }
+    },
+    {
+      "event_id": "us7000txpv",
+      "requested_at": "2026-11-12T03:48:06.927620+00:00",
+      "response": {
+        "latitude": 53.673107,
+        "longitude": -164.79846,
+        "generationtime_ms": 0.1519918441772461,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 4.0,
+          "relative_humidity_2m": 72,
+          "apparent_temperature": -3.6,
+          "precipitation": 0.1,
+          "weather_code": 51,
+          "wind_speed_10m": 36.7
+        }
+      }
+    },
+    {
+      "event_id": "us7000txpu",
+      "requested_at": "2026-11-12T03:48:07.088849+00:00",
+      "response": {
+        "latitude": 53.532513,
+        "longitude": -164.68452,
+        "generationtime_ms": 0.20968914031982422,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 3.8,
+          "relative_humidity_2m": 71,
+          "apparent_temperature": -4.0,
+          "precipitation": 0.0,
+          "weather_code": 2,
+          "wind_speed_10m": 37.7
+        }
+      }
+    },
+    {
+      "event_id": "tx2026wgdyjd",
+      "requested_at": "2026-11-12T03:48:07.250545+00:00",
+      "response": {
+        "latitude": 32.138626,
+        "longitude": -101.05405,
+        "generationtime_ms": 0.1741647720336914,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 660.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 14.8,
+          "relative_humidity_2m": 65,
+          "apparent_temperature": 13.5,
+          "precipitation": 0.0,
+          "weather_code": 0,
+          "wind_speed_10m": 5.8
+        }
+      }
+    },
+    {
+      "event_id": "us7000txpk",
+      "requested_at": "2026-11-12T03:48:07.411885+00:00",
+      "response": {
+        "latitude": 27.87346,
+        "longitude": 87.87162,
+        "generationtime_ms": 0.2180337905883789,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 5546.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": -14.5,
+          "relative_humidity_2m": 52,
+          "apparent_temperature": -18.7,
+          "precipitation": 0.0,
+          "weather_code": 0,
+          "wind_speed_10m": 7.5
+        }
+      }
+    },
+    {
+      "event_id": "us7000txpg",
+      "requested_at": "2026-11-12T03:48:07.574883+00:00",
+      "response": {
+        "latitude": 60.49209,
+        "longitude": -140.09435,
+        "generationtime_ms": 0.34105777740478516,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 2011.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": -9.6,
+          "relative_humidity_2m": 88,
+          "apparent_temperature": -13.0,
+          "precipitation": 0.1,
+          "weather_code": 85,
+          "wind_speed_10m": 0.6
+        }
+      }
+    },
+    {
+      "event_id": "us7000txpa",
+      "requested_at": "2026-11-12T03:48:07.743761+00:00",
+      "response": {
+        "latitude": -7.9789104,
+        "longitude": -13.373169,
+        "generationtime_ms": 0.1277923583984375,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 24.6,
+          "relative_humidity_2m": 78,
+          "apparent_temperature": 25.7,
+          "precipitation": 0.0,
+          "weather_code": 0,
+          "wind_speed_10m": 20.6
+        }
+      }
+    },
+    {
+      "event_id": "pr71539098",
+      "requested_at": "2026-11-12T03:48:07.904417+00:00",
+      "response": {
+        "latitude": 17.820738,
+        "longitude": -65.7323,
+        "generationtime_ms": 0.11813640594482422,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 28.8,
+          "relative_humidity_2m": 78,
+          "apparent_temperature": 32.6,
+          "precipitation": 0.0,
+          "weather_code": 3,
+          "wind_speed_10m": 18.1
+        }
+      }
+    },
+    {
+      "event_id": "us7000txns",
+      "requested_at": "2026-11-12T03:48:08.064083+00:00",
+      "response": {
+        "latitude": 13.813708,
+        "longitude": -92.97797,
+        "generationtime_ms": 0.13875961303710938,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 30.2,
+          "relative_humidity_2m": 72,
+          "apparent_temperature": 35.5,
+          "precipitation": 0.0,
+          "weather_code": 0,
+          "wind_speed_10m": 8.1
+        }
+      }
+    },
+    {
+      "event_id": "us7000txni",
+      "requested_at": "2026-11-12T03:48:08.225986+00:00",
+      "response": {
+        "latitude": -19.648506,
+        "longitude": -69.313446,
+        "generationtime_ms": 0.1666545867919922,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 2656.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 16.1,
+          "relative_humidity_2m": 44,
+          "apparent_temperature": 14.0,
+          "precipitation": 0.0,
+          "weather_code": 0,
+          "wind_speed_10m": 4.3
+        }
+      }
+    },
+    {
+      "event_id": "us7000txnf",
+      "requested_at": "2026-11-12T03:48:08.392256+00:00",
+      "response": {
+        "latitude": -21.335676,
+        "longitude": -177.98166,
+        "generationtime_ms": 0.6084442138671875,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 23.6,
+          "relative_humidity_2m": 72,
+          "apparent_temperature": 22.9,
+          "precipitation": 0.0,
+          "weather_code": 0,
+          "wind_speed_10m": 25.2
+        }
+      }
+    },
+    {
+      "event_id": "aka2026wjnswr",
+      "requested_at": "2026-11-12T03:48:08.555532+00:00",
+      "response": {
+        "latitude": 56.133568,
+        "longitude": -152.40741,
+        "generationtime_ms": 0.1533031463623047,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 2.7,
+          "relative_humidity_2m": 73,
+          "apparent_temperature": -2.5,
+          "precipitation": 0.0,
+          "weather_code": 3,
+          "wind_speed_10m": 19.1
+        }
+      }
+    },
+    {
+      "event_id": "us7000txmx",
+      "requested_at": "2026-11-12T03:48:08.719343+00:00",
+      "response": {
+        "latitude": -23.514938,
+        "longitude": -179.81052,
+        "generationtime_ms": 0.4451274871826172,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 23.0,
+          "relative_humidity_2m": 74,
+          "apparent_temperature": 22.6,
+          "precipitation": 0.0,
+          "weather_code": 1,
+          "wind_speed_10m": 22.8
+        }
+      }
+    },
+    {
+      "event_id": "us7000txmq",
+      "requested_at": "2026-11-12T03:48:08.885868+00:00",
+      "response": {
+        "latitude": -41.511425,
+        "longitude": -74.17865,
+        "generationtime_ms": 0.13947486877441406,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 13.8,
+          "relative_humidity_2m": 88,
+          "apparent_temperature": 10.9,
+          "precipitation": 0.0,
+          "weather_code": 0,
+          "wind_speed_10m": 23.3
+        }
+      }
+    },
+    {
+      "event_id": "aka2026wjlejc",
+      "requested_at": "2026-11-12T03:48:09.047279+00:00",
+      "response": {
+        "latitude": 56.063267,
+        "longitude": -152.46407,
+        "generationtime_ms": 0.3224611282348633,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 2.7,
+          "relative_humidity_2m": 74,
+          "apparent_temperature": -2.5,
+          "precipitation": 0.0,
+          "weather_code": 3,
+          "wind_speed_10m": 19.7
+        }
+      }
+    },
+    {
+      "event_id": "us7000txmi",
+      "requested_at": "2026-11-12T03:48:09.209170+00:00",
+      "response": {
+        "latitude": -28.64675,
+        "longitude": -70.39908,
+        "generationtime_ms": 0.18668174743652344,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 2243.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 17.1,
+          "relative_humidity_2m": 37,
+          "apparent_temperature": 14.6,
+          "precipitation": 0.0,
+          "weather_code": 0,
+          "wind_speed_10m": 5.2
+        }
+      }
+    },
+    {
+      "event_id": "us7000txm8",
+      "requested_at": "2026-11-12T03:48:09.371156+00:00",
+      "response": {
+        "latitude": -6.362038,
+        "longitude": 154.74873,
+        "generationtime_ms": 0.125885009765625,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 26.7,
+          "relative_humidity_2m": 85,
+          "apparent_temperature": 32.3,
+          "precipitation": 0.0,
+          "weather_code": 3,
+          "wind_speed_10m": 3.1
+        }
+      }
+    },
+    {
+      "event_id": "tx2026wfribb",
+      "requested_at": "2026-11-12T03:48:09.531791+00:00",
+      "response": {
+        "latitude": 28.87315,
+        "longitude": -98.93436,
+        "generationtime_ms": 0.19085407257080078,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 153.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 16.9,
+          "relative_humidity_2m": 87,
+          "apparent_temperature": 17.6,
+          "precipitation": 0.0,
+          "weather_code": 0,
+          "wind_speed_10m": 6.2
+        }
+      }
+    },
+    {
+      "event_id": "aka2026wjfuiv",
+      "requested_at": "2026-11-12T03:48:09.691993+00:00",
+      "response": {
+        "latitude": 63.37434,
+        "longitude": -151.56657,
+        "generationtime_ms": 0.2256631851196289,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 608.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": -7.6,
+          "relative_humidity_2m": 95,
+          "apparent_temperature": -11.2,
+          "precipitation": 0.0,
+          "weather_code": 3,
+          "wind_speed_10m": 3.1
+        }
+      }
+    },
+    {
+      "event_id": "us7000txjg",
+      "requested_at": "2026-11-12T03:48:09.853682+00:00",
+      "response": {
+        "latitude": -56.06327,
+        "longitude": -27.720734,
+        "generationtime_ms": 0.25260448455810547,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": -0.7,
+          "relative_humidity_2m": 97,
+          "apparent_temperature": -8.7,
+          "precipitation": 0.0,
+          "weather_code": 3,
+          "wind_speed_10m": 38.8
+        }
+      }
+    },
+    {
+      "event_id": "tx2026wfnqhx",
+      "requested_at": "2026-11-12T03:48:10.017416+00:00",
+      "response": {
+        "latitude": 31.658514,
+        "longitude": -104.34269,
+        "generationtime_ms": 0.4146099090576172,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 1149.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 11.8,
+          "relative_humidity_2m": 72,
+          "apparent_temperature": 10.0,
+          "precipitation": 0.0,
+          "weather_code": 0,
+          "wind_speed_10m": 6.5
+        }
+      }
+    },
+    {
+      "event_id": "aka2026wjamms",
+      "requested_at": "2026-11-12T03:48:10.183900+00:00",
+      "response": {
+        "latitude": 68.01406,
+        "longitude": -147.35016,
+        "generationtime_ms": 0.15270709991455078,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 1253.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": -10.6,
+          "relative_humidity_2m": 87,
+          "apparent_temperature": -15.3,
+          "precipitation": 0.0,
+          "weather_code": 45,
+          "wind_speed_10m": 8.6
+        }
+      }
+    },
+    {
+      "event_id": "us7000txiz",
+      "requested_at": "2026-11-12T03:48:10.346008+00:00",
+      "response": {
+        "latitude": -14.516696,
+        "longitude": 167.22635,
+        "generationtime_ms": 0.1615285873413086,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 0.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 27.0,
+          "relative_humidity_2m": 73,
+          "apparent_temperature": 28.6,
+          "precipitation": 0.1,
+          "weather_code": 51,
+          "wind_speed_10m": 25.2
+        }
+      }
+    },
+    {
+      "event_id": "us7000txis",
+      "requested_at": "2026-11-12T03:48:10.505109+00:00",
+      "response": {
+        "latitude": -22.530756,
+        "longitude": -69.18048,
+        "generationtime_ms": 0.14734268188476562,
+        "utc_offset_seconds": 0,
+        "timezone": "GMT",
+        "timezone_abbreviation": "GMT",
+        "elevation": 1815.0,
+        "current_units": {
+          "time": "iso8601",
+          "interval": "seconds",
+          "temperature_2m": "°C",
+          "relative_humidity_2m": "%",
+          "apparent_temperature": "°C",
+          "precipitation": "mm",
+          "weather_code": "wmo code",
+          "wind_speed_10m": "km/h"
+        },
+        "current": {
+          "time": "2026-11-12T03:45",
+          "interval": 900,
+          "temperature_2m": 20.3,
+          "relative_humidity_2m": 35,
+          "apparent_temperature": 18.4,
+          "precipitation": 0.0,
+          "weather_code": 0,
+          "wind_speed_10m": 3.3
+        }
+      }
+    }
+  ]
+}
