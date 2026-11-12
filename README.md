@@ -24,7 +24,9 @@ landing_zone/                 Landing zone for raw JSON ingestion envelopes
   run_*.json                  Live ingestion runs from USGS and Open-Meteo APIs (git-ignored)
 tests/                        Automated test suite
   test_pipeline.py            5 comprehensive unit & contract tests for Week 4 deliverables
-docs/                         Architecture, ER diagrams, data dictionary, and strategy docs
+docs/                         Architecture, ER diagrams, dashboard, and strategy docs
+  analytical_dashboard.html   Interactive standalone reporting dashboard (Canvas map, charts, filters)
+  analytical_insights_report.md Full analytical insights report with Gold SQL metrics
   er_diagram.png              Rendered high-resolution 3NF Entity Relationship Diagram
   er_diagram.md               Mermaid diagram and cardinality definitions
   schema_documentation.md     Full 3NF data dictionary, constraints, and normalization proofs
@@ -33,6 +35,7 @@ docs/                         Architecture, ER diagrams, data dictionary, and st
   dashboard_spec.md           Databricks AI/BI Lakeview dashboard specification
   demo_guide.md               Minute-by-minute 5-minute video demo recording script
 scripts/                      Automation and helper utilities
+  build_dashboard_html.py     Generator script compiling analytical_dashboard.html
   generate_erd_image.py       Script used to generate docs/er_diagram.png via matplotlib
   upload_to_volume.sh         Helper script to upload landing files to Unity Catalog Volume
 earthquake_pipeline_notebook.py  Self-contained Databricks notebook with widget parameters
