@@ -1,111 +1,140 @@
-# Earthquake + Weather Data Pipeline (Track A)
+# Earthquake & Weather Alerts — Real-Time Data Intelligence Platform (Track A)
 
-An end-to-end data engineering project that joins public USGS earthquake events with Open-Meteo current-weather snapshots, lands validated JSON envelopes, loads data into a normalized (3NF) relational schema, and orchestrates transformations through Bronze, Silver, and Gold Delta Lake tables with PySpark on Databricks.
+An end-to-end Data Engineering capstone project that ingests live seismic events from the **USGS FDSN GeoJSON API** and surface weather snapshots from the **Open-Meteo API**, lands raw JSON envelopes, loads a normalized **3NF relational schema**, transforms data through a **Medallion Architecture (Bronze → Silver → Gold Star Schema)** using **PySpark & Delta Lake on Databricks**, and surfaces insights via an interactive **Streamlit analytical dashboard**.
 
 ---
 
-## Repository Map
+## Architecture & Medallion Flow
+
+```mermaid
+flowchart LR
+  USGS[USGS FDSN GeoJSON API] --> ING[src/ingest.py\nRetry + Exponential Backoff]
+  OM[Open-Meteo Current API] --> ING
+  ING --> LZ[landing_zone/\nValidated JSON Envelopes]
+  LZ -->|Week 4: SQLite / ANSI SQL| NF[3NF Relational DB\nsrc/load_data.py]
+  LZ -->|Week 5: Unity Catalog Volume| B[Bronze Delta\nIdempotent MERGE]
+  B --> S[Silver Delta\n3NF + Deduplicated Events]
+  S --> G[Gold Delta Star Schema\nfact_earthquake + Dimensions]
+  G --> ST[Streamlit Dashboard\ndashboard.py]
+  G --> D[Databricks SQL / Lakeview\nsql/transformations.sql]
+```
+
+See [`docs/architecture.md`](docs/architecture.md) for detailed layer contracts.
+
+---
+
+## Repository Structure
 
 ```text
-src/                          Python ingestion and transformation scripts
-  ingest.py                   USGS + Open-Meteo ingestion with backoff, retry & pre-save validation
-  load_data.py                Loads raw JSON into normalized 3NF database with FK enforcement
-  simulate_pipeline.py        Offline end-to-end simulation (Bronze/Silver/Gold & SQL analytics)
-  transform_bronze.py         Bronze raw Delta tables ingestion (Databricks)
-  transform_silver.py         Silver 3NF normalization, parsing & deduplication (Databricks)
-  transform_gold.py           Gold analytical star schema generation (Databricks)
-  run_pipeline.py             Databricks entrypoint / spark-submit runner
-sql/                          Database DDL and analytical reporting
-  create_tables.sql           Normalized 3NF relational schema DDL (ANSI SQL / SQLite / Postgres)
-  databricks_delta_tables.sql Unity Catalog DDL for Bronze, Silver (3NF), and Gold Delta tables
-  transformations.sql         Analytical SQL queries over Gold star schema
-landing_zone/                 Landing zone for raw JSON ingestion envelopes
-  sample_data.json            Verified actual API capture from USGS & Open-Meteo
-  run_*.json                  Live ingestion runs from USGS and Open-Meteo APIs (git-ignored)
-tests/                        Automated test suite
-  test_pipeline.py            5 comprehensive unit & contract tests for Week 4 deliverables
-docs/                         Architecture, ER diagrams, dashboard, and strategy docs
-  analytical_dashboard.html   Interactive standalone reporting dashboard (Canvas map, charts, filters)
-  analytical_insights_report.md Full analytical insights report with Gold SQL metrics
-  er_diagram.png              Rendered high-resolution 3NF Entity Relationship Diagram
-  er_diagram.md               Mermaid diagram and cardinality definitions
-  schema_documentation.md     Full 3NF data dictionary, constraints, and normalization proofs
-  deduplication_strategy.md   Formal deduplication, versioning, and idempotency strategy
-  architecture.md             End-to-end pipeline architecture across landing, 3NF, and Lakehouse
-  dashboard_spec.md           Databricks AI/BI Lakeview dashboard specification
-  demo_guide.md               Minute-by-minute 5-minute video demo recording script
-scripts/                      Automation and helper utilities
-  build_dashboard_html.py     Generator script compiling analytical_dashboard.html
-  generate_erd_image.py       Script used to generate docs/er_diagram.png via matplotlib
-  upload_to_volume.sh         Helper script to upload landing files to Unity Catalog Volume
-earthquake_pipeline_notebook.py  Self-contained Databricks notebook with widget parameters
-databricks_job.json           Databricks Workflow multi-task scheduled job definition
-databricks.yml                Databricks Asset Bundle (DAB) deployment config
-requirements.txt              Local Python dependencies
+├── dashboard.py                      # Functioning Streamlit dashboard connected to Gold Star Schema
+├── databricks.yml                    # Databricks Asset Bundle (DAB) config (Serverless Standard v6)
+├── databricks_job.json               # Databricks Workflows scheduled job definition
+├── earthquake_pipeline_notebook.py   # Self-contained Databricks notebook (Bronze -> Silver -> Gold)
+├── requirements.txt                  # Python dependencies (ingestion + Streamlit dashboard)
+├── landing_zone/
+│   └── sample_data.json              # Verified live API capture (USGS + Open-Meteo)
+├── src/
+│   ├── ingest.py                     # API ingestion with backoff, jitter, Retry-After & validation
+│   ├── load_data.py                  # Week 4 loader: JSON -> normalized 3NF SQLite tables
+│   ├── simulate_pipeline.py          # Local Bronze -> Silver -> Gold Star Schema simulator
+│   ├── transform_bronze.py           # PySpark Bronze Delta MERGE ingestion
+│   ├── transform_silver.py           # PySpark Silver 3NF + deduplication Delta MERGE
+│   ├── transform_gold.py             # PySpark Gold Star Schema Delta MERGE
+│   └── run_pipeline.py               # Databricks spark-submit / Python task entrypoint
+├── sql/
+│   ├── create_tables.sql             # Week 4: ANSI/SQLite normalized 3NF DDL
+│   ├── databricks_delta_tables.sql   # Week 5: Databricks Unity Catalog Delta Lake DDL
+│   └── transformations.sql           # Analytical Gold SQL queries
+├── docs/
+│   ├── er_diagram.png                # Normalized 3NF ER diagram
+│   ├── er_diagram.md                 # Mermaid 3NF ER diagram
+│   ├── schema_documentation.md       # 3NF data dictionary & normalization proofs
+│   ├── deduplication_strategy.md     # Deduplication & Delta MERGE strategy
+│   ├── star_schema.png               # Gold analytical Star Schema diagram
+│   ├── star_schema.md                # Star Schema grain, keys & integrity notes
+│   ├── dashboard_spec.md             # Databricks AI/BI Lakeview dashboard spec
+│   ├── analytical_dashboard.html     # Standalone static HTML analytical report
+│   ├── analytical_insights_report.md # Written analytical insights & query results
+│   └── demo_guide.md                 # 5-minute demo script
+├── scripts/
+│   ├── generate_erd_image.py         # Generates docs/er_diagram.png
+│   ├── generate_star_schema_image.py # Generates docs/star_schema.png
+│   ├── build_dashboard_html.py       # Generates docs/analytical_dashboard.html
+│   └── upload_to_volume.sh           # Uploads landing_zone/*.json to Unity Catalog Volume
+└── tests/
+    ├── test_pipeline.py              # Week 4 unit & contract tests (5 tests)
+    └── test_week5_pipeline.py        # Week 5 Medallion, Star Schema & Dashboard tests (7 tests)
 ```
 
 ---
 
-## 1. Week 4: Local Execution & Submission Instructions
+## Database Design & Diagrams
 
-Python 3.10+ is recommended. Set up a virtual environment, install requirements, fetch live API data, and execute the 3NF data loader:
+### 1. Normalized 3NF Schema (Week 4 & Silver Layer)
+- **Entities:** `location`, `magnitude_type`, `earthquake`, `weather_observation`
+- **DDL:** [`sql/create_tables.sql`](sql/create_tables.sql)
+- **Documentation:** [`docs/schema_documentation.md`](docs/schema_documentation.md) | [`docs/er_diagram.md`](docs/er_diagram.md)
 
+![Normalized 3NF ER Diagram](docs/er_diagram.png)
+
+### 2. Gold Analytical Star Schema (Week 5)
+- **Grain:** 1 row per unique USGS `event_id` in `gold.fact_earthquake`, enriched with the latest available Open-Meteo weather snapshot.
+- **Dimensions:** `gold.dim_date` (`date_key`), `gold.dim_location` (`location_key`), `gold.dim_magnitude_type` (`magnitude_type_key`).
+- **DDL:** [`sql/databricks_delta_tables.sql`](sql/databricks_delta_tables.sql)
+- **Documentation:** [`docs/star_schema.md`](docs/star_schema.md)
+
+![Gold Star Schema Diagram](docs/star_schema.png)
+
+---
+
+## Local Execution Instructions
+
+### 1. Setup & Week 4 Ingestion + 3NF Load
 ```bash
-# 1. Create and activate a virtual environment
 python3 -m venv .venv
-source .venv/bin/activate       # On Windows: .venv\Scripts\activate
-
-# 2. Install dependencies
+source .venv/bin/activate       # Windows: .venv\Scripts\activate
 python3 -m pip install -r requirements.txt
 
-# 3. Fetch live API data (USGS earthquakes + Open-Meteo weather snapshots)
+# Fetch live USGS earthquakes & Open-Meteo weather snapshots
 python3 src/ingest.py --period day --min-magnitude 2.5 --limit 100 --weather-limit 25
 
-# 4. Load raw JSON into normalized 3NF database (creates earthquake_3nf.db)
+# Load raw JSON into normalized 3NF SQLite tables
 python3 src/load_data.py landing_zone --db earthquake_3nf.db
-
-# 5. Run the automated Week 4 test suite
-python3 -m unittest tests/test_pipeline.py
 ```
 
-### Key Week 4 Features
-1. **API Ingestion (`src/ingest.py`):**
-   - Retries network errors, HTTP 429, and server errors with bounded exponential backoff and random jitter; honors `Retry-After`.
-   - Validates response contracts (*before* saving) using `validate_api_response()`.
-   - Saves immutable JSON envelopes into `landing_zone/`.
-2. **Normalized 3NF Relational Schema (`sql/create_tables.sql`):**
-   - Four normalized entities: `location`, `magnitude_type`, `earthquake`, and `weather_observation`.
-   - Eliminates redundant attributes, repeating groups, and transitive dependencies.
-   - Enforces primary and foreign key constraints.
-3. **Data Loading & Idempotent Deduplication (`src/load_data.py`):**
-   - Executes `sql/create_tables.sql` to initialize schema.
-   - Parses raw GeoJSON coordinates, unpacks atomic attributes, and populates parent entities before children.
-   - Idempotent deduplication: USGS updates retain the record with the latest `properties.updated` timestamp; weather retains the latest request for `(event_id, observation_time_utc)`.
-4. **Documentation:**
-   - Visual ER diagram: `docs/er_diagram.png` and `docs/er_diagram.md`.
-   - Complete data dictionary and 3NF proofs: `docs/schema_documentation.md`.
-   - Formal deduplication explanation: `docs/deduplication_strategy.md`.
+### 2. Run Local Week 5 Medallion Simulation & Analytical Dashboard
+```bash
+# Run local Bronze -> Silver -> Gold simulation and print Gold analytics
+python3 src/simulate_pipeline.py
+
+# Launch the interactive Streamlit analytical dashboard
+streamlit run dashboard.py
+```
+To connect `dashboard.py` directly to a live Databricks SQL Warehouse instead of local Gold tables, set `DATABRICKS_SERVER_HOSTNAME`, `DATABRICKS_HTTP_PATH`, and `DATABRICKS_TOKEN` in your environment (never commit credentials).
 
 ---
 
-## 2. Cloud Platform Deployment (Databricks)
+## Databricks Implementation & Execution
 
-1. Use your Databricks workspace with Serverless Standard v6 (or runtime with PySpark & Delta Lake).
-2. Ensure catalog `workspace` and schema `bronze` exist with a Volume at `/Volumes/workspace/bronze/landing/`.
-3. Upload `landing_zone/sample_data.json` or live run files using `scripts/upload_to_volume.sh` or the Databricks UI.
-4. Import `earthquake_pipeline_notebook.py` into your Databricks Workspace and click **Run All**.
-5. Query `workspace.gold.fact_earthquake` using `sql/transformations.sql`.
-6. To schedule as a job, deploy `databricks_job.json` via Databricks Workflows or DAB (`databricks.yml`).
+All Delta Lake tables use **Unity Catalog** (`workspace.bronze`, `workspace.silver`, `workspace.gold`) and idempotent **Delta `MERGE`** operations (`DeltaTable.forName(...).merge(...)`).
+
+1. **Create Volume & Upload Landing Data:**
+   - Ensure catalog `workspace` exists; the notebook runs `CREATE SCHEMA IF NOT EXISTS` for `bronze`, `silver`, `gold` and `CREATE VOLUME IF NOT EXISTS workspace.bronze.landing`.
+   - Upload `landing_zone/sample_data.json` (or live `run_*.json` files) to `/Volumes/workspace/bronze/landing/` via the Databricks UI or `./scripts/upload_to_volume.sh`.
+2. **Run the Self-Contained Notebook:**
+   - Import [`earthquake_pipeline_notebook.py`](earthquake_pipeline_notebook.py) into your Databricks Workspace.
+   - Select **Serverless Standard v6** compute and click **Run All**.
+3. **Schedule with Databricks Workflows / Asset Bundles:**
+   - Via DAB: `databricks bundle deploy` (uses [`databricks.yml`](databricks.yml)).
+   - Via Jobs API/CLI: update `<your-databricks-username>` in [`databricks_job.json`](databricks_job.json) and run `databricks jobs create --json @databricks_job.json`.
+4. **Run Gold Analytics SQL:**
+   - Execute [`sql/transformations.sql`](sql/transformations.sql) in the Databricks SQL Editor or build the Lakeview dashboard per [`docs/dashboard_spec.md`](docs/dashboard_spec.md).
 
 ---
 
-## Week 4 Requirements Compliance Checklist
+## Verification & Testing Results
 
-- [x] **API Ingestion:** `src/ingest.py` fetches live data with backoff, retries, error handling, rate limiting, and pre-save schema validation.
-- [x] **Dependencies:** `requirements.txt` is complete, accurate, and free of unused packages.
-- [x] **Sample Ingested Data:** `landing_zone/sample_data.json` is an actual, validated API capture (not fabricated).
-- [x] **Normalized Database Design (3NF):** High-res ER diagram (`docs/er_diagram.png`, `docs/er_diagram.md`) and formal documentation (`docs/schema_documentation.md`).
-- [x] **SQL Table Creation:** `sql/create_tables.sql` creates normalized 3NF tables with correct types, PKs, FKs, and constraints.
-- [x] **Data Loading:** `src/load_data.py` loads raw JSON, maintains referential integrity, and handles nulls/errors.
-- [x] **Deduplication Strategy:** Documented in `docs/deduplication_strategy.md` and implemented in `src/load_data.py`.
-- [x] **Automated Testing:** All unit & integration tests pass (`tests/test_pipeline.py`).
+Locally verified with `python3 -m pytest -v tests/`:
+- **Week 4 Tests (`tests/test_pipeline.py` — 5/5 PASSED):** Genuine live sample validation, pre-save API validation, ANSI SQL DDL execution, 3NF foreign-key integrity (`PRAGMA foreign_key_check`), and deduplication idempotency.
+- **Week 5 Tests (`tests/test_week5_pipeline.py` — 7/7 PASSED):** PySpark & notebook AST/syntax + Delta `MERGE` contract verification, Databricks job/bundle config validation, Bronze counts, Silver deduplication & coordinate quality filtering, Gold Star Schema grain & referential integrity, Gold analytical queries, and Streamlit `AppTest` rendering.
+- **Note on Databricks Execution:** PySpark and Delta Lake execution in a live Databricks workspace has not been run from this local environment (no Databricks CLI/workspace credentials configured locally) and must be executed manually in Databricks using the steps above.

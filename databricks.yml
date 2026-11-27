@@ -1,6 +1,14 @@
 bundle:
   name: earthquake-weather-pipeline
 
+variables:
+  catalog:
+    description: Target Unity Catalog name
+    default: workspace
+  landing_path:
+    description: Unity Catalog Volume path for landed JSON envelopes
+    default: /Volumes/workspace/bronze/landing/
+
 targets:
   dev:
     mode: development
@@ -17,16 +25,20 @@ resources:
   jobs:
     earthquake_pipeline_scheduled_run:
       name: "[Track A] Earthquake + Weather Pipeline"
-      description: "Scheduled execution of Bronze/Silver/Gold transformations on Serverless Standard v6"
+      description: "Scheduled execution of Bronze/Silver/Gold Delta Lake transformations on Serverless compute"
       schedule:
         quartz_cron_expression: "0 0 */6 * * ?"
         timezone_id: "UTC"
         pause_status: PAUSED
+      environments:
+        - environment_key: serverless_standard_v6
+          spec:
+            client: "1"
       tasks:
         - task_key: run_notebook
+          environment_key: serverless_standard_v6
           notebook_task:
             notebook_path: ./earthquake_pipeline_notebook.py
             base_parameters:
-              catalog: workspace
-              landing_path: /Volumes/workspace/bronze/landing/
-
+              catalog: ${var.catalog}
+              landing_path: ${var.landing_path}

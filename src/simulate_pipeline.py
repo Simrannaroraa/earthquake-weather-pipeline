@@ -19,8 +19,8 @@ def hash_key(*args: object) -> int:
     return int(hashlib.md5(s.encode("utf-8")).hexdigest()[:15], 16)
 
 
-def run_simulation(landing_dir: Path = Path("landing_zone")) -> sqlite3.Connection:
-    conn = sqlite3.connect(":memory:")
+def run_simulation(landing_dir: Path = Path("landing_zone"), db_path: str | Path = ":memory:") -> sqlite3.Connection:
+    conn = sqlite3.connect(db_path)
     cur = conn.cursor()
 
     # 1. DDL: Create Tables matching Databricks Delta Schemas

@@ -1,2 +1,5 @@
 requests>=2.31,<3
-# PySpark and Delta Lake are provided by Databricks Runtime.
+pandas>=2.0,<4
+plotly>=5.0,<7
+streamlit>=1.30,<2
+# PySpark and Delta Lake are provided by Databricks Runtime (Serverless Standard v6).
